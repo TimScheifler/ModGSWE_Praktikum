@@ -1,0 +1,27 @@
+#White: whiltePlayer="magnus-carlsen"
+#Black: blackPlayer="fabiano-caruana"
+#12345678901234567890123456789012345678901234567890
+MOVE1.    e4   c5
+MOVE2.   Sf3  Sc6
+MOVE3.   Lb5  g6
+MOVE4.   Lxc6 dxc6
+MOVE5.    d3   Lg7
+MOVE6.    h3   Sf6
+MOVE7.   Sc3  Sd7
+MOVE8.   Le3   e5
+MOVE9.   O-O   b6
+MOVE10.  Sh2  Sf8
+MOVE11.   f4   exf4
+MOVE12.  Txf4 Le6
+MOVE13.  Tf2   h6
+MOVE14.  Dd2   g5
+MOVE15.  Taf1 Dd6
+MOVE16.  Sg4  O-O-O
+MOVE17.  Sf6  Sd7
+MOVE18.  Sh5  Le5
+MOVE19.   g4   f6
+MOVE20.   b3  Lf7
+MOVE21.  Sd1  Sf8
+MOVE22.  Sxf6 Se6
+MOVE23.  Sh5  Lxh5
+MOVE24.  gxh5 Sf4
