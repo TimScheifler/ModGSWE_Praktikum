@@ -14,6 +14,7 @@ public class ReaderStrategy {
     public ReaderStrategy(String code, Class target) {
         this.code = code;
         this.target = target;
+        this.notationPattern = null;
     }
 
     public ReaderStrategy(String code, Class target, String notationPattern){
@@ -29,14 +30,9 @@ public class ReaderStrategy {
         extractors.add(new FieldExtractor(begin, end, target, this.notationPattern));
     }
 
-    public void printExtractors(){
-        for (FieldExtractor fieldExtractor : extractors){
-            System.out.println(fieldExtractor.toString());
-        }
-    }
-
     private List targetPropertyNames() {
         List<String> actualFieldNames = new ArrayList<>();
+
         Field[] fields = target.getDeclaredFields();
         for (Field field : fields){
             actualFieldNames.add(field.getName());
@@ -45,9 +41,7 @@ public class ReaderStrategy {
     }
 
     public Object process(String line) throws Exception {
-        System.out.println("Line: " + line);
         Object result = target.getDeclaredConstructor().newInstance();
-        System.out.println("Name: "+result.getClass().getName());
         for(FieldExtractor extractor : extractors){
             extractor.extractField(line, result);
         }

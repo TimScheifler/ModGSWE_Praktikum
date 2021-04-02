@@ -19,7 +19,7 @@ public class Application {
     private void configure(Reader target) throws Exception {
         target.addStrategy(configureServiceCall());
         target.addStrategy(configureUsage());
-        //target.addStrategy(configureChess());
+        target.addStrategy(configureChess());
     }
 
     private ReaderStrategy configureServiceCall() throws Exception {
@@ -28,7 +28,6 @@ public class Application {
         result.addFieldExtractor(19, 23, "CustomerID");
         result.addFieldExtractor(24, 27, "CallTypeCode");
         result.addFieldExtractor(28, 35, "DateOfCallString");
-        result.printExtractors();
         return result;
     }
 
@@ -37,7 +36,6 @@ public class Application {
         result.addFieldExtractor(4, 8, "CustomerID");
         result.addFieldExtractor(9, 22, "CustomerName");
         result.addFieldExtractor(23, 30, "ReadDate");
-        //result.printExtractors();
         return result;
     }
 
@@ -46,8 +44,8 @@ public class Application {
 
         ReaderStrategy result = new ReaderStrategy("MOVE", Move.class, notationPattern);
         result.addFieldExtractor(0, 8, "MoveID");
-        result.addFieldExtractor(9, 12, "OriginField");
-        result.addFieldExtractor(13, 18, "TargetField");
+        result.addFieldExtractor(9, 13, "OriginField");
+        result.addFieldExtractor(14, 19, "TargetField");
         return result;
     }
 }

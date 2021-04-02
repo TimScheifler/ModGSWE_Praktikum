@@ -28,7 +28,6 @@ public class Reader {
     private void processLine(String line, List<Object> result) throws Exception {
        if(isBlank(line)) return;
        if(isComment(line)) return;
-        //IRGENDWO AB HIER
         String typeCode = getTypeCode(line);
         System.out.println("TypeCode: "+typeCode);
         ReaderStrategy strategy = strategies.get(typeCode);

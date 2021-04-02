@@ -18,14 +18,16 @@ public class FieldExtractor {
     }
 
     public void extractField(String line, Object targetObject) throws Exception {
-       String value = line.substring(begin, end);
-       setValue(targetObject, value);
+        String value = line.substring(begin, end);
+        setValue(targetObject, value);
     }
 
     private void setValue(Object targetObject, String value) throws Exception {
+        String tmp = value.replaceAll("\\s","");
         Method method = targetObject.getClass().getMethod("set"+targetPropertyName, String.class);
         if(notationPattern != null){
-            Matcher matcher = Pattern.compile(notationPattern).matcher(value);
+            Pattern pattern = Pattern.compile(notationPattern, Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(tmp);
             if (!matcher.matches()) {
                 throw new Exception("Input does not match given pattern");
             }
