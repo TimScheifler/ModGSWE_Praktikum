@@ -6,14 +6,14 @@ import hfu.modgswe.aufgabe1.Pojo.Usage;
 
 public class Application {
 
-    private static String a1_a = ".\\src\\main\\resources\\a1_a.txt";
-    private static String a1_b = ".\\src\\main\\resources\\a1_b.txt";
+    private static final String A1_A = ".\\src\\main\\resources\\a1_a.txt";
+    private static final String A1_B = ".\\src\\main\\resources\\a1_b.txt";
 
     public static void main(String[] args) throws Exception {
         Application application = new Application();
         Reader reader = new Reader();
         application.configure(reader);
-        reader.process(a1_a);
+        reader.process(A1_B);
     }
 
     private void configure(Reader target) throws Exception {

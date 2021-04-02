@@ -7,8 +7,8 @@ import java.util.regex.Pattern;
 public class FieldExtractor {
     private final int begin;
     private final int end;
-    private String targetPropertyName;
-    private String notationPattern;
+    private final String targetPropertyName;
+    private final String notationPattern;
 
     public FieldExtractor(int begin, int end, String targetPropertyName, String notationPattern) {
         this.begin = begin;
@@ -25,6 +25,7 @@ public class FieldExtractor {
     private void setValue(Object targetObject, String value) throws Exception {
         String tmp = value.replaceAll("\\s","");
         Method method = targetObject.getClass().getMethod("set"+targetPropertyName, String.class);
+
         if(notationPattern != null){
             Pattern pattern = Pattern.compile(notationPattern, Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(tmp);
