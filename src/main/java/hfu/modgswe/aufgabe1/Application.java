@@ -44,8 +44,8 @@ public class Application {
 
         ReaderStrategy result = new ReaderStrategy("MOVE", Move.class, notationPattern);
         result.addFieldExtractor(0, 8, "MoveID");
-        result.addFieldExtractor(9, 13, "OriginField");
-        result.addFieldExtractor(14, 19, "TargetField");
+        result.addFieldExtractor(9, 13, "Move_White");
+        result.addFieldExtractor(14, 18, "Move_Black");
         return result;
     }
 }

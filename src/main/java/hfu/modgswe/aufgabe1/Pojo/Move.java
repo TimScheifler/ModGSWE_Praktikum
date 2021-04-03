@@ -2,8 +2,8 @@ package hfu.modgswe.aufgabe1.Pojo;
 
 public class Move {
     private String MoveID;
-    private String OriginField;
-    private String TargetField;
+    private String Move_White;
+    private String Move_Black;
 
     public Move() {
     }
@@ -16,19 +16,19 @@ public class Move {
         MoveID = moveID;
     }
 
-    public String getOriginField() {
-        return OriginField;
+    public String getMove_White() {
+        return Move_White;
     }
 
-    public void setOriginField(String originField) {
-        OriginField = originField;
+    public void setMove_White(String move_White) {
+        Move_White = move_White;
     }
 
-    public String getTargetField() {
-        return TargetField;
+    public String getMove_Black() {
+        return Move_Black;
     }
 
-    public void setTargetField(String targetField) {
-        TargetField = targetField;
+    public void setMove_Black(String move_Black) {
+        Move_Black = move_Black;
     }
 }

@@ -18,7 +18,7 @@ public class FieldExtractor {
     }
 
     public void extractField(String line, Object targetObject) throws Exception {
-        String value = line.substring(begin, end);
+        String value = line.substring(begin, end + 1);
         setValue(targetObject, value);
     }
 
