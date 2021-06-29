@@ -1,4 +1,4 @@
-package hfu.modgswe.aufgabe1;
+package hfu.modgswe.aufgabe1.reader;
 
 import java.lang.reflect.Method;
 import java.util.regex.Matcher;

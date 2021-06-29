@@ -1,8 +1,10 @@
 package hfu.modgswe.aufgabe1;
 
-import hfu.modgswe.aufgabe1.Pojo.Move;
-import hfu.modgswe.aufgabe1.Pojo.ServiceCall;
-import hfu.modgswe.aufgabe1.Pojo.Usage;
+import hfu.modgswe.aufgabe1.pojo.Move;
+import hfu.modgswe.aufgabe1.pojo.ServiceCall;
+import hfu.modgswe.aufgabe1.pojo.Usage;
+import hfu.modgswe.aufgabe1.reader.Reader;
+import hfu.modgswe.aufgabe1.reader.ReaderStrategy;
 
 public class Application {
 

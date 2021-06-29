@@ -1,4 +1,4 @@
-package hfu.modgswe.aufgabe1.Pojo;
+package hfu.modgswe.aufgabe1.pojo;
 
 public class Move {
     private String MoveID;

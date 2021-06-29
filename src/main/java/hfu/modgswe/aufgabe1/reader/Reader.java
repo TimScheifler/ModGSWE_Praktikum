@@ -1,4 +1,4 @@
-package hfu.modgswe.aufgabe1;
+package hfu.modgswe.aufgabe1.reader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
